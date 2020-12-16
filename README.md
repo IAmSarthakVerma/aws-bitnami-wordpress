@@ -54,3 +54,11 @@ sudo /opt/bitnami/bncert-tool
     * HTTP to HTTPS redirect as Y
     * non www to www as Y
     * www to non www as N
+    
+## Restarting
+
+* To restart your instance, run the following command:
+
+```
+sudo /opt/bitnami/ctlscript.sh restart
+```
