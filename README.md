@@ -76,6 +76,22 @@ sudo /opt/bitnami/bncert-tool
     * HTTP to HTTPS redirect as Y
     * non www to www as Y
     * www to non www as N
+
+## Increasing Upload Size
+
+* To increase the upload size:
+
+```
+sudo nano /opt/bitnami/php/etc/php.ini
+```
+
+Then find and replace the values of the follwoing:
+
+```
+upload_max_filesize = 256M
+post_max_size = 256M
+max_execution_time = 300
+```
     
 ## Restarting
 
