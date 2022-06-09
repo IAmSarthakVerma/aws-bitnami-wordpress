@@ -38,6 +38,28 @@ cat ./bitnami_credentials
 sudo /opt/bitnami/apps/wordpress/bnconfig --disable_banner 1
 ```
 
+## Changing Domain Name
+
+* To change the domain name:
+
+```
+sudo nano /opt/bitnami/wordpress/wp-config.php
+```
+
+Then change the code from:
+
+```
+define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST'] . '/');
+define('WP_HOME', 'http://' . $_SERVER['HTTP_HOST'] . '/');
+```
+
+to 
+
+```
+define('WP_SITEURL', 'http://DOMAIN/');
+define('WP_HOME', 'http://DOMAIN/');
+```
+
 ## Installing SSL
 
 DISCLAIMER: Point your domain to the instance before proceeding.
